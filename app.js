@@ -2,7 +2,7 @@
 
 module.exports = app => {
   // `app.validator` is load by egg-core loader
-  // user just need to define it at `config/plugin.js`
+  // user just need to define it at `config/plugin.js` with `package`
   app.validator.addRule('jsonString', (rule, value) => {
     try {
       JSON.parse(value);
@@ -10,4 +10,8 @@ module.exports = app => {
       return 'must be json string';
     }
   });
+
+  // `app.inline` is load by egg-core loader
+  // user just need to define it at `config/plugin.js` with `inline path`
+  app.inline();
 };
