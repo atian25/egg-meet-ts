@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @param {EggApplication} app - app
+ * @param {EggTypes.Application} app - app
  */
 module.exports = app => {
   app.get('/', 'home.index');
